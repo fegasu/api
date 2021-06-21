@@ -1,0 +1,3 @@
+Options +FollowSymLinks -Multiviews
+RewriteEngine on
+RewriteRule ^([^/]+)/([^/]+)/([^/]+) tablas.php?peticion=$1&opcion=$2&parte=$3 [L,QSA]
