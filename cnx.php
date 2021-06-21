@@ -4,7 +4,7 @@ class SqlitePDO{
 var $Cnx;
 var $Rs;
 var $u;
- function __construct($Bd="SALUD.db"){
+ function __construct($Bd="./SALUD.db"){
  try {
     $this->Cnx= new PDO('sqlite:'.$Bd);
   } catch (Exception $e) {die ($e);}
