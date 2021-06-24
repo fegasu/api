@@ -35,3 +35,21 @@ function CSV2ARRAY($cadena){
    }
    return $a;
 }
+if($N==0){
+      
+}
+if($N==1){
+      
+}
+if($N==2){
+      
+}
+if($N==3){
+      
+}
+if($N==4){
+      
+}
+if($N==5){
+      
+}
