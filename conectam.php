@@ -1,5 +1,5 @@
 <?php
-include "cnxMysql.php";
+include "cnxM.php";
 $cn=new DBMysql();
 //$cn->Ejecutar("select * from eps");
 //while($cn->Cargar())
