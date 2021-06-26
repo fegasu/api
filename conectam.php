@@ -15,8 +15,8 @@ $cn=new DBMysql();
 //$cn=new DBMysql();
 //$cn->Ejecutar("CALL PREPS('D',16,null,null)");
 //$cn=new DBMysql();
-//$cn->Ejecutar("CALL PREPS('A',null,null,null)");
-//while($cn->Cargar())
-//	echo $cn->getdato(1)."<br>";
+$cn->Ejecutar("CALL PREPS('A',null,null,null)");
+while($cn->Cargar())
+	echo $cn->getdato(1)."<br>";
 
 
