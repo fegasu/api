@@ -15,8 +15,8 @@ $cn=new BDCnx();
 //$cn=new DBMysql();
 //$cn->Ejecutar("CALL PREPS('D',16,null,null)");
 //$cn=new DBMysql();
-//$cn->Ejecutar("CALL PREPS('A',null,null,null)");
-$cn->Ejecutar("SELECT * FROM EPS");
+$cn->Ejecutar("CALL PREPS('A',null,null,null)");
+//$cn->Ejecutar("SELECT * FROM EPS");
 while($cn->Cargar())
 	echo $cn->getdato(1)."<br>";
 
