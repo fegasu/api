@@ -1,6 +1,6 @@
 <?php
 //Conexion a base de datos Sqlite
-class Cnx{
+class BDCnx{
 var $Cnx;
 var $Rs;
 var $u;
@@ -16,8 +16,7 @@ var $filas=0;
 
  function Ejecutar($Sentencia){
   try{
-   $this->Rs = $this->Cnx->prepare($Sentencia.';')
-   or die(SQLITE_ERROR.' '.$Sentencia);
+   $this->Rs = $this->Cnx->prepare($Sentencia.';') or die(SQLITE_ERROR.' '.$Sentencia);
    $this->Rs->execute();
    $this->numcols=$this->Rs->columnCount();
    $this->filas=$this->Rs->rowCount();

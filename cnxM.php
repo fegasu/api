@@ -1,5 +1,5 @@
 <?php
-class Cnx{
+class BDCnx{
  var $f;
  var $t;
  var $e;

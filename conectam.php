@@ -1,6 +1,6 @@
 <?php
 include "cnxM.php";
-$cn=new DBMysql();
+$cn=new BDCnx();
 //$cn->Ejecutar("select * from eps");
 //while($cn->Cargar())
 //	echo $cn->getdato(1)."<br>";
@@ -15,7 +15,8 @@ $cn=new DBMysql();
 //$cn=new DBMysql();
 //$cn->Ejecutar("CALL PREPS('D',16,null,null)");
 //$cn=new DBMysql();
-$cn->Ejecutar("CALL PREPS('A',null,null,null)");
+//$cn->Ejecutar("CALL PREPS('A',null,null,null)");
+$cn->Ejecutar("SELECT * FROM EPS");
 while($cn->Cargar())
 	echo $cn->getdato(1)."<br>";
 
