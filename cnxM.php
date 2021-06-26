@@ -1,5 +1,5 @@
 <?php
-class DBMysql{
+class Cnx{
  var $f;
  var $t;
  var $e;

@@ -1,6 +1,6 @@
 <?php
 //Conexion a base de datos Sqlite
-class SqlitePDO{
+class Cnx{
 var $Cnx;
 var $Rs;
 var $u;
