@@ -13,8 +13,8 @@ function __construct($bd="salud"){
 
 function Ejecutar($sentencia){
    $this->t=mysqli_query($this->f,$sentencia);
-   $this->numcols=$this->t->field_count;
-   $this->filas=mysqli_num_fields($this->t);
+   if(stripos('PR', $sentencia)==0){
+  }
    
 }
 function EjecutarJSON($sentencia){
@@ -31,6 +31,9 @@ function CargarJSON(){
 }
  function CargarCSV($sentencia){
     $this->Ejecutar($sentencia);
+    $this->numcols=$this->t->field_count;
+    $this->filas=mysqli_num_fields($this->t);
+
     $a="";
     $j=0;
     while($si=$this->Cargar()){
