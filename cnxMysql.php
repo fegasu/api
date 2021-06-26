@@ -12,10 +12,7 @@ function __construct($bd="salud"){
 }
 
 function Ejecutar($sentencia){
-   $this->t=mysqli_query($this->f,$sentencia);
-   if(stripos('PR', $sentencia)==0){
-  }
-   
+   $this->t=mysqli_query($this->f,$sentencia);   
 }
 function EjecutarJSON($sentencia){
       $this->t=mysqli_query($this->f,$sentencia);
