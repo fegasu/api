@@ -20,6 +20,43 @@
         }
     }
 
+class DbS
+    {
+        private static $instance=NULL;
+        public static $Bd;
+        private function __construct(){}
+        
+        
+        private function __clone(){}
+        
+        public static function getConnect($Bd){
+            if (!isset(self::$instance)) {
+                $pdo_options[PDO::ATTR_ERRMODE]=PDO::ERRMODE_EXCEPTION;
+                //self::$instance= new PDO('mysql:host=localhost;dbname=salud','root','',$pdo_options);
+                self::$instance= new PDO('sqlite:'.$Bd);
+                self::$instance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                self::$instance->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
+            }
+            return self::$instance;
+        }
+    }
+class CSqlite{
+    private $cn;
+    private function __construct(){}
+    public function DameJSON($db,$sql){
+        $t=$db->prepare("SELECT * FROM EPS");
+        $t->execute();
+        $e = $t->fetchAll(PDO::FETCH_OBJ);
+        return json_encode($e);
+    }
+    public function Dame($db,$sql){
+        $t=$db->prepare("SELECT * FROM EPS");
+        $t->execute();
+        $e = $t->fetchAll(PDO::FETCH_OBJ);
+        return ($e);
+    }
+}
+ 
 class BDCnx{
  var $f;
  var $t;
