@@ -1,6 +1,6 @@
 <?php
 include "cnxM.php";
-$cn=new BDCnx();
+//$cn=new BDCnx();
 //$cn->Ejecutar("select * from eps");
 //while($cn->Cargar())
 //	echo $cn->getdato(1)."<br>";
@@ -15,9 +15,18 @@ $cn=new BDCnx();
 //$cn=new DBMysql();
 //$cn->Ejecutar("CALL PREPS('D',16,null,null)");
 //$cn=new DBMysql();
-$cn->Ejecutar("CALL PREPS('A',null,null,null)");
+//$cn->Ejecutar("CALL PREPS('A',null,null,null)");
 //$cn->Ejecutar("SELECT * FROM EPS");
-while($cn->Cargar())
-	echo $cn->getdato(1)."<br>";
+//while($cn->Cargar())
+//	echo $cn->getdato(1)."<br>";
+$db=Db::getConnect();
+//$t=$db->query('SELECT * FROM EPS');
+
+$t=$db->query("CALL PREPS('A',null,null,null)");
+$e=json_encode($t->fetchAll());
+//print_r($e);
+echo $e;
+//echo $e[0]["nombre"];
+
 
 
