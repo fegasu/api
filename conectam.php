@@ -42,8 +42,8 @@ class eps_controller{
     	$t=$bd->prepare($sql);
         $t->execute();
         $e = $t->fetchAll(PDO::FETCH_BOTH);
-//        return json_encode($e);
-        return $e;
+       return json_encode($e);
+        
     }
     function Editar(stdClass $cual){
 
