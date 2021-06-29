@@ -12,7 +12,6 @@ class DbS
         public static function getConnect($Bd){
             if (!isset(self::$instance)) {
                 $pdo_options[PDO::ATTR_ERRMODE]=PDO::ERRMODE_EXCEPTION;
-                //self::$instance= new PDO('mysql:host=localhost;dbname=salud','root','',$pdo_options);
                 self::$instance= new PDO('sqlite:'.$Bd);
                 self::$instance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 self::$instance->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);

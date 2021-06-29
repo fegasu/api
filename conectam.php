@@ -1,9 +1,10 @@
 <?php
 include "cnxS.php";
-//$cn=new BDCnx();
+$cn=new BDCnx();
 //$cn->Ejecutar("select * from eps");
 //while($cn->Cargar())
 //	echo $cn->getdato(1)."<br>";
+
 //$cn->EjecutarJSON("select * from eps");
 //echo $cn->CargarJSON();
 //echo  $cn->CargarCSV("select * from eps");
@@ -27,12 +28,13 @@ include "cnxS.php";
 //print_r($e);
 //echo $e;
 //echo $e[0]["nombre"];
-//$db=DbS::getConnect("SALUD_.db");
-//$e=CSqlite::Dame($db,"SELECT * FROM EPS");
-//for($i=0;$i<count($e);$i++)
-//echo $e[$i]->nombre."<br>";	
+$db=DbS::getConnect("SALUD_.db");
+$e=CSqlite::Dame($db,"SELECT * FROM EPS");
+for($i=0;$i<count($e);$i++)
+echo $i."->".$e[$i]->nombre."<br>";	
 //print_r( $e);
 
+/*
 class eps_controller{
     public  $cn;
 	public function __controler($bd){
@@ -59,5 +61,5 @@ class eps_controller{
 $db=DbS::getConnect("SALUD_.db");
 $x=new eps_controller($db);
 print_r( $x->Listar($db,"SELECT  * FROM EPS"));
-
+*/
 
