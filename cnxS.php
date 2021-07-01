@@ -45,7 +45,7 @@ public $numcols;
 var $filas=0;
 
 
- function __construct($Bd="./SALUD.db"){
+ function __construct($Bd="./SALUD_.db"){
  try {
     $this->Cnx= new PDO('sqlite:'.$Bd);
   } catch (Exception $e) {die ($e);}

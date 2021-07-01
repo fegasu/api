@@ -1,9 +1,9 @@
 <?php
 include "cnxS.php";
 $cn=new BDCnx();
-//$cn->Ejecutar("select * from eps");
-//while($cn->Cargar())
-//	echo $cn->getdato(1)."<br>";
+$cn->Ejecutar("select * from eps");
+while($cn->Cargar())
+	echo $cn->getdato(1)."<br>";
 
 //$cn->EjecutarJSON("select * from eps");
 //echo $cn->CargarJSON();
@@ -28,10 +28,10 @@ $cn=new BDCnx();
 //print_r($e);
 //echo $e;
 //echo $e[0]["nombre"];
-$db=DbS::getConnect("SALUD_.db");
-$e=CSqlite::Dame($db,"SELECT * FROM EPS");
-for($i=0;$i<count($e);$i++)
-echo $i."->".$e[$i]->nombre."<br>";	
+//$db=DbS::getConnect("SALUD_.db");
+//$e=CSqlite::Dame($db,"SELECT * FROM EPS");
+//for($i=0;$i<count($e);$i++)
+//echo $i."->".$e[$i]->nombre."<br>";	
 //print_r( $e);
 
 /*
