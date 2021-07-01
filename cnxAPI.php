@@ -1,6 +1,6 @@
 <?php
 /**************************************************
- * Esta funcion permite comunicarme con la API-HTACCESS
+ * Esta funcion permite comunicación con la API-HTACCESS
  * Autor: Jose Fernando Galindo Suarez
  ***************************************************/ 
   function CnxAPI($purl,$peticion,$opcion,$parte){

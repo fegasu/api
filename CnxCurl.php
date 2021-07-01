@@ -1,6 +1,6 @@
 <?php
 /**************************************************
- * Esta funcion permite comunicarme con la API-REST
+ * Esta funcion permite comunicación con la API-REST
  * Autor: Jose Fernando Galindo Suarez
  * $data: es el arreglo que se le pasa a la api
  * $url: Lugar donde se encuentra la api
