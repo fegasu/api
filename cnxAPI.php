@@ -1,5 +1,9 @@
 <?php
-function CnxAPI($purl,$peticion,$opcion,$parte){
+/**************************************************
+ * Esta funcion permite comunicarme con la API-HTACCESS
+ * Autor: Jose Fernando Galindo Suarez
+ ***************************************************/ 
+  function CnxAPI($purl,$peticion,$opcion,$parte){
 	$aux=str_replace(" ", "+", $parte);
     $url="http://".$_SERVER["SERVER_NAME"]."/".$purl."/".$peticion."/".$opcion."/".$aux;
     $a=file_get_contents($url);

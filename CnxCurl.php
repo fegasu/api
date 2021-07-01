@@ -1,4 +1,11 @@
 <?php
+/**************************************************
+ * Esta funcion permite comunicarme con la API-REST
+ * Autor: Jose Fernando Galindo Suarez
+ * $data: es el arreglo que se le pasa a la api
+ * $url: Lugar donde se encuentra la api
+ * $metodo: GET, POST, PUT, DELETE
+ * ************************************************/
 function CnxCurl(array $data,$url, $metodo){
 	$data_json=json_encode($data);
 	$ch=curl_init();
