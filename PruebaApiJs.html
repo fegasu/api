@@ -1,0 +1,24 @@
+<form>
+<table>
+<td>Id:</td><td><input type=text id=a1><td></tr>
+<td>Nombre:</td><td><input type=text id=a2><td></tr>
+<td>Estado:</td><td><input type=text id=a3><td></tr>
+</form>
+<script>
+var url="	/eps/0/1";
+async function getUser() 
+{
+  let response = await      fetch(`http://localhost/proy/api2242755/eps/0/14`);
+  let data = await response.json()
+  return data;
+}
+
+function Mio(x){
+    z=x.split(",");
+	document.getElementById("a1").value=z[0];
+	document.getElementById("a2").value=z[1];
+	document.getElementById("a3").value=z[2];
+}
+
+getUser();
+</script>
